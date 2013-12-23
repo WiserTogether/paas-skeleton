@@ -41,7 +41,7 @@ $(VIRTUAL_ENV)/bin/activate: $(VIRTUAL_ENV)/lib/python2.7/site-packages
 
 .PHONY: clean-python-virtualenv
 clean-python-virtualenv:
-	if [ "x$(VIRTUAL_ENV)x" != "xx" ]; then rm -rf $(VIRTUAL_ENV); fi
+	if [[ "x$(VIRTUAL_ENV)x" != "xx" ]]; then rm -rf $(VIRTUAL_ENV); fi
 
 
 $(PYTHON_BIN): $(VIRTUAL_ENV)/lib/python2.7/site-packages
