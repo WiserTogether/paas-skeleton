@@ -3,7 +3,7 @@
 PYTHON_BIN := $(VIRTUAL_ENV)/bin/python
 #VE_FLAGS := --extra-search-dir $(PWD)/lib/buildout-cache/dist --never-download --use-distribute var/ve; fi
 VE_FLAGS := --use-distribute 
-PIP_FLAGS := --use-mirrors --quiet
+PIP_FlAGS := --default-timeout=400 --download-cache $PIP_DOWNLOAD_CACHE --use-mirrors
 
 .PHONY: check-python-virtualenv
 check-python-virtualenv: $(PYTHON_BIN)
